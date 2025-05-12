@@ -13,7 +13,7 @@ int findMinumum (int arr[], int size) {
 }
 
 int main() {
-    int arr[7] = {2,0,4,1,40,15,80};
+    int arr[7] = {2,3,4,1,40,15,80};
     int size = 7;
 
     int minimum = findMinumum(arr, size);
