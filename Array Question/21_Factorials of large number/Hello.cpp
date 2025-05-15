@@ -27,7 +27,7 @@ vector<int> factorial(int n) {
  
 int main()
 {
-    int n =100;
+    int n =5;
 
     factorial(n);
     

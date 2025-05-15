@@ -3,17 +3,22 @@
 #include<algorithm>
 using namespace std;
 
-string reverse(string word, int size) {
-    for(int i =size -1; i >=0; i--) {
-        cout << word[i];
+string searchTarget(string name, string trgt, int size) {
+    for(int i =0; i <size; i++) {
+        if(name[i] == trgt) {
+            cout << "Target is :- " << name[i];
+        }
     }
 }
+
  
 int main()
 {
-    string word = "Lokesh";
+    string name ="Lokesh";
+    string trgt ="k";
+
     int size = 6;
-     
-    reverse(word, size);
+    
+    searchTarget(name, trgt, size);
     return 0;
 }
