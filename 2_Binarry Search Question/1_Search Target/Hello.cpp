@@ -29,9 +29,9 @@ int main()
 
     int ans = findTarget(arr, trgt, size);
     if(ans == -1) {
-        cout << "Target was not found :- " << endl;
+        cout << "Target was not found " << endl;
     } else {
-        cout << "Target was found :- " << arr[ans] << endl;
+        cout << "Target was found : " << arr[ans] << endl;
     }
     
     return 0;
