@@ -1,21 +1,36 @@
 #include<iostream>
+#include<vector>
+#include<algorithm>
 using namespace std;
 
-int strStr(int st1[], int st2[], int n1, int n2) {
-    for(int i=0; i<n1; i++) {
-        for(int j=0; j<n2; j++) {
-            if(st1[i] == st2[j]) {
-                cout << i;
-            }
+int findFirstOccerance(int arr[], int trgt, int size, int ans) {
+    int s =0, e =size-1;
+    while(s <=e) {
+        int mid = s+(e-s)/2;
+        if(arr[mid] == trgt) {
+           ans = mid;
+           e = mid-1;
+        } else if(arr[mid] < trgt) {
+            s =mid+1;
+        } else if(arr[mid] > trgt) {
+            e =mid-1;
         }
     }
+    return ans;
 }
+ 
+int main()
+{
+    int arr[] ={10,20,20,30,30,30,40,50,60};
+    int trgt = 30;
+    int size = 9;
+    int ans =-1;
 
-int main () {
-    int st1[] = {1,2,3,4,5,6,7,8,9};
-    int st2[] = {1,2,3,12};
-
-    int n1 = 9;
-    int n2 = 3;
-    strStr(st1, st2, n1, n2);
+    int fstOccrnc =findFirstOccerance(arr, trgt, size, ans);
+    if(fstOccrnc == ans) {
+        cout << "First Occerance was not found " << endl;
+    } else {
+        cout << "First Occerance was found : " << fstOccrnc << endl;
+    }
+    return 0;
 }
