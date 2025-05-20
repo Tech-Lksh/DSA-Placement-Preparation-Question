@@ -17,7 +17,8 @@ int findPeak(int arr[], int size) {
         mid = s +(e-s)/2;
     }
 
-    return s;
+    // return s;
+    cout << "Peak Element Index is :- " << s << endl;
 }
  
 int main()
@@ -25,6 +26,6 @@ int main()
     int arr[]  ={10,20,30,50,40,30,20};
     int size = 7;
      
-    cout << "Peak Element Index is :- " << findPeak(arr, size);
+    findPeak(arr, size);
     return 0;
 }
