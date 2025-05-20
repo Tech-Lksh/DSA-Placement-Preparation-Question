@@ -20,9 +20,11 @@ int main()
     int arr[] ={1,2,3,4,5,6,7,8,9,10};
     int size = 10;
     cout << "Size value is 10 " << endl;
+
     int kth;
     cout << "Plss Enter Kth Value But  kth always lessthan size value : ";
     cin>>kth;
+    
     rotateArrayByOne(arr, size, kth);
 
     for(int i=0; i<size; i++) {
