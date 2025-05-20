@@ -3,24 +3,30 @@
 #include<algorithm>
 using namespace std;
 
-int rotateArrayByOne(int arr[], int size) {
-    int lastIndex = arr[size-1];
-
-    for(int i=size-1; i>0; i--) {
-        arr[i] = arr[i-1];
+int rotateArrayByOne(int arr[], int size, int kth) {
+    int ans[size];
+    for(int i =0; i <size; i++) {
+        int solve = (i + kth) % size;
+        ans[solve] = arr[i];
     }
 
-    arr[0] = lastIndex;
-
-    for(int k =0; k<size; k++) {
-        cout << arr[k] << " ";
+    for(int i=0; i<size; i++) {
+        arr[i] = ans[i];
     }
 }
  
 int main()
 {
-    int arr[] ={1,2,3,4,5};
-    int size = 5;
-    rotateArrayByOne(arr, size);
+    int arr[] ={1,2,3,4,5,6,7,8,9,10};
+    int size = 10;
+    cout << "Size value is 10 " << endl;
+    int kth;
+    cout << "Plss Enter Kth Value But  kth always lessthan size value : ";
+    cin>>kth;
+    rotateArrayByOne(arr, size, kth);
+
+    for(int i=0; i<size; i++) {
+        cout << arr[i] << " ";
+    }
     return 0;
 }
