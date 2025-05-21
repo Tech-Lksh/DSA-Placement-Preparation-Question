@@ -22,7 +22,7 @@ int main()
     cout << "Size value is 10 " << endl;
 
     int kth;
-    cout << "Plss Enter Kth Value But  kth always lessthan size value : ";
+    cout << "Plss Enter Kth Value But kth value always lessthan size value : ";
     cin>>kth;
     
     rotateArrayByOne(arr, size, kth);
