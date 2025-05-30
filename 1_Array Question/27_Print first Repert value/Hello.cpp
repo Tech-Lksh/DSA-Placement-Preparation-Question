@@ -4,10 +4,12 @@
 using namespace std;
 
 int firstRepertValue(int arr[], int size) {
-    sort(arr, arr + size);
+    // sort(arr, arr + size);
     for(int i=0; i<size; i++) {
-        if(arr[i] == arr[i+1]) {
-            cout << arr[i];
+        for(int j=1; j<size; j++) {
+            if(arr[i] == arr[j]) {
+                cout << arr[j];
+            }
         }
     }
 }
