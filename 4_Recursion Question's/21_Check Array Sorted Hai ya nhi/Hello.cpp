@@ -9,7 +9,7 @@ bool sortArry(int arr[], int size, int index) {
     }
 
     // processing
-    if(arr[index + 1] > arr[index]) {
+    if(arr[index] > arr[index - 1]) {
         // cout << "Array Is Sorted : ";/
         bool aageKaAns = sortArry(arr, size, index+1);
         return aageKaAns;
@@ -26,7 +26,7 @@ int main()
 {
     int arr[] = {10,20,30,40,50};
     int size = 5;
-    int index = 0;
+    int index = 1;
 
     bool isSorted = sortArry(arr, size, index);
 
