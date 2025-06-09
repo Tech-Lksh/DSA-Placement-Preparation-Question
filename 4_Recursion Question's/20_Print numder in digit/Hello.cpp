@@ -2,6 +2,7 @@
 #include<vector>
 #include<algorithm>
 #include<math.h>
+#include<limits.h>
 using namespace std;
 
 void printNumber(vector<int> num, int size, int index, int &number) {
