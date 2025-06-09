@@ -33,7 +33,7 @@ int find(string str, int index, int size, char trgt, vector<int> &ans) {
     }
 
     // recursive case
-    return find(str, index+1, size, trgt, ans);
+    find(str, index+1, size, trgt, ans);
 }
  
 int main() {
