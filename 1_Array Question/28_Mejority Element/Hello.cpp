@@ -14,7 +14,7 @@ int findMejorityElmt(int arr[], int size) {
             if(freq > size/2) {
                 return val;
             }
-        }
+    }
 }
  
 int main()

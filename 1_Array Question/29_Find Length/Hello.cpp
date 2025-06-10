@@ -11,6 +11,11 @@ void find(int arr[], int arr1[], int size, int size1, vector<int> &ans) {
             int currIndx = 0;
             if(arr[i] == arr1[j]) {
                 ans.push_back(arr1[j]);
+                currIndx =j;
+            }
+            j = currIndx+1;
+            if(j >= size1) {
+                j=0;
             }
         }
     }
