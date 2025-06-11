@@ -9,7 +9,7 @@ using namespace std;
 void mergeArry(int arr1[], int arr2[], int size1, int size2, vector<int> &ans) {
     int i = 0;
     int j = 0;
-    while(i<=size1 && j<size2) {
+    while(i<size1 && j<size2) {
         if(arr1[i]<arr2[j]) {
             ans.push_back(arr1[i]);
             i++;
@@ -18,6 +18,16 @@ void mergeArry(int arr1[], int arr2[], int size1, int size2, vector<int> &ans) {
             ans.push_back(arr2[j]);
             j++;
         }
+    }
+
+    while(i<size1) {
+        ans.push_back(arr1[i]);
+        i++;
+    }
+
+    while(j<size2) {
+        ans.push_back(arr2[j]);
+        j++;
     }
 }
 
