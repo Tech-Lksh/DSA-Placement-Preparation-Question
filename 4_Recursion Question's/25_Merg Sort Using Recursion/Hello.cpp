@@ -71,7 +71,7 @@ void merge(int arr[], int s, int e) {
 	delete[] right;
 }
 
-void mergeSort(int arr[], int s, int e) {
+void mergeSort(int arr[], int size, int s, int e) {
 	//base case
 	if(s >= e) {
 		return;
@@ -79,9 +79,9 @@ void mergeSort(int arr[], int s, int e) {
 	//break
 	int mid = (s+e)/2;
 	//recusive call for left array
-	mergeSort(arr,s, mid);
+	mergeSort(arr, size, s, mid);
 	//recusive call for right array
-	mergeSort(arr, mid+1, e);
+	mergeSort(arr, size, mid+1, e);
 	//merge 2 sorted arrays
 	merge(arr, s, e);
 }
@@ -99,7 +99,7 @@ int main() {
 	}
 	cout << endl;
 	
-	mergeSort(arr,s,e);
+	mergeSort(arr,size,s,e);
 
 	cout << "After merge sort: " << endl;
 	for(int i=0; i<size; i++) {
