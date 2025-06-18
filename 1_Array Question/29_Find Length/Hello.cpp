@@ -9,17 +9,14 @@ void findLen(string str, int length, string str1, int length1, vector<string> &a
     int i = 0, j = 0;
     while(i < length && j < length1) {
         int index = 0;
-        if(str[i] == str1[j]){
+        if(str[i] == str1[j]) {
             // ans.push_back(str1[j]);
             cout << str1[j] << " ";
             index = j;
-        }
-        else {
-            j = index + 1;
+            
         }
         j++;
-        i++;            
-        
+        i++;
 
     }
 }
