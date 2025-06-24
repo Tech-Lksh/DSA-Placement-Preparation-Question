@@ -30,8 +30,7 @@ public:
 
     // Create a dp array
     vector<int> dp(n+1, INT_MIN);
-    int ans = solveUsingRecursion(n,x,y,z,dp)
+    int ans = solveUsingRecursion(n,x,y,z,dp);
     return ans;
     }
 };
- 
