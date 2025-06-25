@@ -1,32 +1,25 @@
-// Write a palindrome code
 #include<iostream>
-#include<vector>
-#include<algorithm>
-#include<limits.h>
-#include<math.h>
 using namespace std;
 
-int findPalindrome(string str, int size, int index, int lstIndx) {
-    // Base case
-    if(index < lstIndx) {
-        return -1;
-    }
+bool isPalindrome(string str, int left, int right) {
+    // Base case: if left >= right, we’ve checked the whole string
+    if (left >= right) return true;
 
-    // Processing
-    if(str[index] == str[lstIndx]) {
-        cout << str[index] << " ";
-    }
+    // If mismatch found
+    if (str[left] != str[right]) return false;
 
-    findPalindrome(str, size, index + 1, lstIndx - 1);
+    // Recursive call
+    return isPalindrome(str, left + 1, right - 1);
 }
- 
+
 int main() {
     string str = "lokekol";
-    int size = 6;
-    int index = 0;
-    int lstIndx = size-1;
 
-    findPalindrome(str, size, index, lstIndx);
+    if (isPalindrome(str, 0, str.size() - 1)) {
+        cout << "The string is a palindrome" << endl;
+    } else {
+        cout << "The string is NOT a palindrome" << endl;
+    }
 
     return 0;
 }
