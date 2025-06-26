@@ -13,7 +13,7 @@ bool isPalindrome(string str, int left, int right) {
 }
 
 int main() {
-    string str = "lokekol";
+    string str = "lokkol";
 
     if (isPalindrome(str, 0, str.size() - 1)) {
         cout << "The string is a palindrome" << endl;
