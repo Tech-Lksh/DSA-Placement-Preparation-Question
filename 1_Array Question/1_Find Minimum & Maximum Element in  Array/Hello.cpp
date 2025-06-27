@@ -23,11 +23,3 @@ int main() {
     int minimum = findMinumum(arr, size);
     cout << "Minimun ans is :- " << minimum << endl;
 }
-
-
-
-
-
-
-
-
