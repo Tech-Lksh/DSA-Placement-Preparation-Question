@@ -1,6 +1,7 @@
-#include <iostream>
-#include <algorithm>
-#include <vector>
+#include <iostream>;
+#include <algorithm>;
+#include <vector>;
+#include <limit.h>;
 using namespace std;
 
 // Function to sort the array using selection sort
@@ -19,9 +20,10 @@ void selectionSort(int arr[], int n)
         }
 
         // Swap the found minimum element with the first element
-        int temp = arr[minIndex];
-        arr[minIndex] = arr[i];
-        arr[i] = temp;
+       // int temp = arr[minIndex];
+       // arr[minIndex] = arr[i];
+        //arr[i] = temp;
+        swap(arr[mainIndex].begin(), arr[i].end());
         cout << arr[i] << " ";
     }
     cout << endl;
